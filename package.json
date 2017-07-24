@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LaoBan-ywcm/Webpack-React/issues"
   },
-  "homepage": "https://github.com/LaoBan-ywcm/Webpack-React#readme"
+  "homepage": "https://github.com/LaoBan-ywcm/Webpack-React#readme",
+  "devDependencies": {
+    "webpack-dev-server": "^2.6.1"
+  }
 }
