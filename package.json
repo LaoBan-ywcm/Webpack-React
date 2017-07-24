@@ -4,7 +4,8 @@
   "description": "利用Webpack搭建React环境",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --content-base build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/LaoBan-ywcm/Webpack-React#readme",
   "devDependencies": {
+    "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
   }
 }
