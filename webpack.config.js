@@ -20,6 +20,9 @@ module.exports = {
             test:/\.js$/,               //babel
             loader:"babel-loader",
             exclude:/node_modules/
+        },{
+            test:/\.css$/,              //style-loader和css-loader
+            loader:"style-loader!css-loader?modules"
         }]
     }
 }
