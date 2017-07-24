@@ -1,7 +1,10 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
 module.exports = {
     entry:__dirname + '/app/main.js',   //入口文件
     output:{
-        path:__dirname + '/public',    //输出路径
+        path:__dirname + '/build',    //输出路径
         filename:'bundle.js'            //输出的文件名
     },
     devtool:"source-map",               //配置source Maps选项
@@ -24,5 +27,10 @@ module.exports = {
             test:/\.css$/,              //style-loader和css-loader
             loader:"style-loader!css-loader?modules"
         }]
-    }
+    },
+    plugins:[                           //插件
+        new HtmlWebpackPlugin({         //html-webpack-plugin
+            template:__dirname + '/app/index.tmpl.html'
+        })
+    ]
 }
