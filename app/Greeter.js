@@ -1,9 +1,10 @@
-const config = require('./config.json');
+import React, { Component } from 'react';
+import config from './config.json';
 
+class Greeter extends Component {
+    render() {
+        return (<div> { config.greeterText } </div>);
+        }
+    }
 
-module.exports = function() {
-    const greet = document.createElement('div');
-    greet.textContent = config.greeterText;
-    return greet;
-}
-
+module.exports = Greeter;

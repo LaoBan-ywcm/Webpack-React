@@ -10,5 +10,16 @@ module.exports = {
         port:"9000",                    //端口号
         inline:true,                    //当源文件修改时要不要刷新页面
         historyApiFallback:true,        //HTML5中单页面应用
+    },
+    module:{
+        loaders:[{                      //设置json-loader
+            test:/\.json$/,             //loader处理的文件类型
+            loader:"json-loader",       //需要用到的loader
+            exclude:/node_modules/      //不包括的文件
+        },{
+            test:/\.js$/,               //babel
+            loader:"babel-loader",
+            exclude:/node_modules/
+        }]
     }
 }
